@@ -30,7 +30,7 @@
             var movieName = document.getElementById("movieName").value;
 
             $.ajax({
-                url: "https://api.themoviedb.org/3/search/movie",
+                url: "https://api.themoviedb.org/3/search/movie?language=pt-BR",
                 data: {
                     api_key: "db2e1996e8f3cccdec769dce7aa8211d",
                     query: movieName

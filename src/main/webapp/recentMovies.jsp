@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +26,7 @@
 
         function getRecentMovies() {
             $.ajax({
-                url: "https://api.themoviedb.org/3/movie/now_playing",
+                url: "https://api.themoviedb.org/3/movie/now_playing?language=pt-BR",
                 data: {
                     api_key: "db2e1996e8f3cccdec769dce7aa8211d"
                 },

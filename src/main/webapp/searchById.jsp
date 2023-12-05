@@ -35,7 +35,7 @@
             var movieId = document.getElementById("movieId").value;
 
             $.ajax({
-                url: "https://api.themoviedb.org/3/movie/" + movieId,
+                url: "https://api.themoviedb.org/3/movie/" + movieId + "?language=pt-BR",
                 data: {
                     api_key: "db2e1996e8f3cccdec769dce7aa8211d"
                 },
