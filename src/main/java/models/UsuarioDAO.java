@@ -7,8 +7,14 @@ import java.sql.SQLException;
 import database.ConexaoBanco;
 
 public class UsuarioDAO {
+	
+	private int idUsuario;
+	private String nomeDeUsuario;
+	private String nome;
+	private String email;
+	private String senha;
 
-    private static final String INSERIR_USUARIO = "INSERT INTO usuarios (nome, nome_usuario, email, senha) VALUES (?, ?, ?, ?)";
+	private static final String INSERIR_USUARIO = "INSERT INTO usuarios (nome, nome_usuario, email, senha) VALUES (?, ?, ?, ?)";
     private static final String OBTENHA_USUARIO_POR_NOME_USUARIO = "SELECT * FROM usuarios WHERE nome_usuario = ?";
     private static final String AUTENTICAR_USUARIO = "SELECT * FROM usuarios WHERE nome_usuario = ? AND senha = ?";
 
@@ -67,13 +73,53 @@ public class UsuarioDAO {
 
     private Usuario mapearUsuario(ResultSet rs) throws SQLException {
         Usuario usuario = new Usuario();
-        usuario.setId(rs.getInt("id"));
+        usuario.setIdUsuario(rs.getInt("id"));
         usuario.setNome(rs.getString("nome"));
-        usuario.setNomeUsuario(rs.getString("nome_usuario"));
+        usuario.setNomeDeUsuario(rs.getString("nome_usuario"));
         usuario.setEmail(rs.getString("email"));
         usuario.setSenha(rs.getString("senha"));
         return usuario;
     }
+    
+    public int getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public String getNomeDeUsuario() {
+		return nomeDeUsuario;
+	}
+
+	public void setNomeDeUsuario(String nomeDeUsuario) {
+		this.nomeDeUsuario = nomeDeUsuario;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }
 
 
