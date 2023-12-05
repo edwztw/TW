@@ -51,6 +51,23 @@ public class DBQuery {
 		return(-1);
 	}
 	
+	public String replacePlaceholders(String sql, String[] values) {
+	    for (String value : values) {
+	        sql = sql.replaceFirst("\\?", "'" + value + "'");
+	    }
+	    return sql;
+	}
+	
+	public ResultSet query(String sql, String[] values) { // select
+		try {
+			ResultSet rs = statement.executeQuery(replacePlaceholders(sql, values));
+			return (rs);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public ResultSet query(String sql) { // select
 		try {
 			ResultSet rs = statement.executeQuery(sql);

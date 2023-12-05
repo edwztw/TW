@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.UsuarioDAO;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/register")
+public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	String nome = request.getParameter("nome");
@@ -17,17 +17,16 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
 
-        // Autenticação do usuário
-        if (autenticarUsuario(nomeUsuario, senha)) {
-            response.getWriter().write("Autenticação bem sucedida");
+        if (criarUsuario(nome, nomeUsuario, email, senha)) {
+            response.getWriter().write("Usuário criado com sucesso");
         } else {
-            response.getWriter().write("Falha na autenticação");
+            response.getWriter().write("Falha na criação do usuário");
         }
     }
-
-    private boolean autenticarUsuario(String nomeUsuario, String senha) {
-	    UsuarioDAO usuario = new UsuarioDAO(nomeUsuario, senha);
-	    if(usuario.autenticarUsuario(nomeUsuario, senha)) {
+    
+    private boolean criarUsuario(String nome, String nomeUsuario, String email, String senha) {
+	    UsuarioDAO usuario = new UsuarioDAO(0, nome, nomeUsuario, email, senha);
+	    if(usuario.criarUsuario("0", nome, nomeUsuario, email, senha)) {
 	    	return true;
 	    }
 	    else {
