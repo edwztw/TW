@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import database.ConexaoBanco;
 import database.DBQuery;
 
 public class UsuarioDAO extends Usuario {
@@ -39,25 +37,6 @@ public class UsuarioDAO extends Usuario {
 	
 	public void inserirUsuario() {
 		this.save();
-	}
-
-	public Usuario obterUsuarioPorNomeUsuario(String nomeUsuario) {
-		try (Connection conexao = ConexaoBanco.obterConexao();
-				PreparedStatement pstmt = conexao.prepareStatement(OBTENHA_USUARIO_POR_NOME_USUARIO)) {
-
-			pstmt.setString(1, nomeUsuario);
-
-			try (ResultSet rs = pstmt.executeQuery()) {
-				if (rs.next()) {
-					return mapearUsuario(rs);
-				}
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace(); // Trate a exceção adequadamente no seu código real
-		}
-
-		return null;
 	}
 
 	public boolean autenticarUsuario(String nomeUsuario, String senha) {
