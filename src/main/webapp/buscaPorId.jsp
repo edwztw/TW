@@ -10,7 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+	<jsp:include page="navbar.jsp" />
     <div class="container mt-5">
         <h2 class="mb-4">Movie Details</h2>
 

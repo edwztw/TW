@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<jsp:include page="navbar.jsp" />
     <div class="container mt-5">
         <form id="loginForm">
             <div class="form-group">
