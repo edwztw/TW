@@ -93,6 +93,13 @@ public class Usuario {
 		}
 		return(0);
 	}
+	
+	public int update() {
+		if (this.getIdUsuario() > 0) {
+			return this.getDBQuery().update(this.toArray());
+		}
+		return(0);
+	}
 
 	public int getIdUsuario() {
 		return idUsuario;

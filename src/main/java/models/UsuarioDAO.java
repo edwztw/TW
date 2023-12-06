@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import database.ConexaoBanco;
 import database.DBQuery;
 
@@ -21,11 +24,19 @@ public class UsuarioDAO extends Usuario {
 		this.setNomeDeUsuario(nome_usuario);
 		this.setSenha(senha);
 	}
+	
+	public UsuarioDAO(int id) {
+		this.setIdUsuario(id);
+	}
+	
+	public UsuarioDAO() {
+	}
 
 	private static final String OBTENHA_USUARIO_POR_NOME_USUARIO = "SELECT * FROM usuarios WHERE nome_usuario = ?";
 	private static final String AUTENTICAR_USUARIO = "SELECT * FROM usuarios WHERE nome_usuario = ? AND senha = ?";
 	private static final String CRIAR_USUARIO = "INSERT INTO usuarios (nome, nome_usuario, email, senha) VALUES ('John Doe', 'john_doe', 'john.doe@example.com', 'randompassword');";
-
+	private static final String LISTAR_USUARIOS = "SELECT * FROM usuarios";
+	
 	public void inserirUsuario() {
 		this.save();
 	}
@@ -72,6 +83,31 @@ public class UsuarioDAO extends Usuario {
         }else {
         	return false;
         }
+    }
+	
+	public List<Usuario> listarUsuarios() {
+		String fieldsName = "id,nome,nome_usuario,email,senha";
+        DBQuery dbQuery = new DBQuery("usuarios", fieldsName, "id");
+        ResultSet resultSet = dbQuery.query(LISTAR_USUARIOS);
+        
+        List<Usuario> usuarios = new ArrayList<>();
+
+        try {
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String nome = resultSet.getString("nome");
+                String nomeUsuario = resultSet.getString("nome_usuario");
+                String email = resultSet.getString("email");
+                String senha = resultSet.getString("senha");
+
+                Usuario usuario = new Usuario(id, nome, nomeUsuario, email, senha);
+                usuarios.add(usuario);
+            }
+            System.out.println(usuarios);
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception appropriately in your code
+        }
+        return usuarios;
     }
 
 	private Usuario mapearUsuario(ResultSet rs) throws SQLException {
