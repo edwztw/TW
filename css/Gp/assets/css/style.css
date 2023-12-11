@@ -406,7 +406,7 @@ h6 {
 #hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("https://image.tmdb.org/t/p/original/zIYROrkHJPYB3VTiW1L9QVgaQO.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -446,42 +446,6 @@ h6 {
   font-size: 24px;
 }
 
-#hero .icon-box {
-  padding: 30px 20px;
-  transition: ease-in-out 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 100%;
-  text-align: center;
-}
-
-#hero .icon-box i {
-  font-size: 32px;
-  line-height: 1;
-  color: #15A9E9;
-}
-
-#hero .icon-box h3 {
-  font-weight: 700;
-  margin: 10px 0 0 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#hero .icon-box h3 a {
-  color: #fff;
-  transition: ease-in-out 0.3s;
-}
-
-#hero .icon-box h3 a:hover {
-  color: #15A9E9;
-}
-
-#hero .icon-box:hover {
-  border-color: #15A9E9;
-}
-
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -498,6 +462,59 @@ h6 {
     font-size: 20px;
     line-height: 24px;
   }
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(#15A9E9, white, transparent);
+  box-shadow: 0 10px 29px 0 rgba(238, 236, 236, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.services .icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.services .icon {
+  background-color: white;
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 30px);
+}
+
+.services .icon i {
+  font-size: 64px;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+.services .title {
+  margin-left: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #111;
+}
+
+.services .icon-box:hover .title a {
+  color: #15A9E9;
+}
+
+.services .description {
+  font-size: 14px;
+  margin-left: 40px;
+  line-height: 24px;
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -518,7 +535,7 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
-  color: #444444;
+  color: #FFFFFF;
   margin: 0 3px 10px 3px;
   transition: all ease-in-out 0.3s;
   border-radius: 50px;
@@ -527,7 +544,7 @@ h6 {
 .portfoio #portfolio-flters li:hover,
 .portfoio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #0880e8;
+  background: linear-gradient(to top,#15A9E9,transparent)
 }
 
 .portfoio #portfolio-flters li:last-child {
@@ -551,9 +568,9 @@ h6 {
   left: 15px;
   right: 15px;
   bottom: -50px;
-  z-index: 3;
+  z-index: 5;
   transition: all ease-in-out 0.3s;
-  background: #0880e8;
+  background: linear-gradient(to top, black, black, transparent);
   padding: 15px 20px;
 }
 
@@ -740,36 +757,29 @@ section {
 # Clients
 --------------------------------------------------------------*/
 .clients {
-  padding-top: 20px;
+  padding: 15px 0;
+  text-align: center;
 }
 
-.clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
+.clients img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
   filter: grayscale(100);
 }
 
-.clients .swiper-slide img:hover {
+.clients img:hover {
   filter: none;
-  opacity: 1;
+  transform: scale(1.15);
 }
 
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
+@media (max-width: 768px) {
+  .clients img {
+    max-width: 40%;
+  }
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  background-color: #ddd;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #15A9E9;
-}
 
 /*--------------------------------------------------------------
 # Features
