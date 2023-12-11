@@ -976,7 +976,7 @@ section {
 }
 
 .counts .image {
-  background: url("../img/counts-img.jpg") center center no-repeat;
+  background: url("../img/cinemaeredes.jpg") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
@@ -1002,7 +1002,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("https://campinas.com.br/wp-content/uploads/2023/09/pipoca-no-cinema-com-almofada-no-chao-scaled-e1695841582534.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1437,6 +1437,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
+  justify-content: center;
   background: #15A9E9;
   color: #151515;
   text-decoration: none;
