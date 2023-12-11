@@ -53,6 +53,27 @@ public class UsuarioDAO extends Usuario {
         return false;
     }
 	
+	public boolean editarUsuario(String nomeUsuario) {
+		DBQuery dbQuery = new DBQuery();
+
+        try {
+            String[] values = {nomeUsuario};
+            ResultSet rs = dbQuery.query(OBTENHA_USUARIO_POR_NOME_USUARIO, values);
+            this.setIdUsuario(rs.getInt("id"));
+            this.setNome(rs.getString("nome"));
+            this.setNomeDeUsuario(rs.getString("nome_usuario"));
+            this.setEmail(rs.getString("email"));
+            this.setSenha(rs.getString("senha"));
+            
+            this.update();
+            return true;
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+		return false;
+	}
+	
 	public boolean criarUsuario(String id, String nome, String nomeUsuario, String email, String senha) {
 		String fieldsName = "id,nome,nome_usuario,email,senha";
         DBQuery dbQuery = new DBQuery("usuarios", fieldsName, "id");

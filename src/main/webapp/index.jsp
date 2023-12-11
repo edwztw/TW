@@ -43,7 +43,7 @@
 					</div>
 
 
-					<div id="pfContent" class="row portfolio-container">
+					<div id="pfContent" class="row portfolio-container" style="position: relative; height:1000px">
 						<script>
 						    $(document).ready(function () {
 						        getRecentMovies();
