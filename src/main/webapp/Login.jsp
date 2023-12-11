@@ -2,15 +2,16 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <!-- Adicione os links do Bootstrap CSS e do jQuery -->
+    Adicione os links do Bootstrap CSS e do jQuery
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head> -->
+<jsp:include page="head.jsp" />
+<body id="grad1">
 	<jsp:include page="navbar.jsp" />
     <div class="container mt-5">
         <form id="loginForm">
