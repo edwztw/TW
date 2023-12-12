@@ -1,31 +1,3 @@
-<!-- navbar.jsp -->
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/ticket_wave/filmesRecentes.jsp">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/ticket_wave/buscaPorTitulo.jsp">Busca por Título</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/ticket_wave/buscaPorId.jsp">Busca por ID</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/ticket_wave/listarUsuarios.jsp">Listar Usuários</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/ticket_wave/Login.jsp">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/ticket_wave/cadastro.jsp">Cadastro</a>
-            </li>
-        </ul>
-    </div>
-</nav>-->
-
-<!-- ======= Header ======= -->
 <header id="header" class="fixed-top ">
   <div class="container d-flex align-items-center justify-content-lg-between">
   
@@ -33,7 +5,7 @@
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Início</a></li>
+        <li><a class="nav-link scrollto active" href="/ticket_wave/index.jsp">Início</a></li>
         <li><a class="nav-link scrollto" href="#about">Ingressos</a></li>
         <li><a class="nav-link scrollto" href="#services">Filmes</a></li>
         <li><a class="nav-link scrollto " href="#portfolio">Favoritos</a></li>
@@ -57,7 +29,7 @@
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
 
-    <a href="#about" class="get-started-btn scrollto">Entrar</a>
+    <a href="/ticket_wave/Login.jsp" class="get-started-btn scrollto">Entrar</a>
 
   </div>
 </header><!-- End Header -->

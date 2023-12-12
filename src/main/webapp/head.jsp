@@ -39,6 +39,11 @@
   		background-color: rgb(2,0,36);
 		background-image: linear-gradient(0deg, rgba(21,169,233,1) 0%, rgba(0,0,0,1) 50%);
 	}
+	
+	#grad_login{
+		background: rgb(21,169,233);
+		background: linear-gradient(0deg, rgba(21,169,233,1) 0%, rgba(0,0,0,1) 100%);
+	}
   </style>
   
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
