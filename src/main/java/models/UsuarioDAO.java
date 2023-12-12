@@ -40,12 +40,12 @@ public class UsuarioDAO extends Usuario {
 	}
 
 	public boolean autenticarUsuario(String nomeUsuario, String senha) {
-        DBQuery dbQuery = new DBQuery();
-
+		String fieldsName = "id,nome,nome_usuario,email,senha";
+        DBQuery dbQuery = new DBQuery("usuarios", fieldsName, "id");
         try {
             String[] values = {nomeUsuario, senha};
             ResultSet rs = dbQuery.query(AUTENTICAR_USUARIO, values);
-
+            System.out.println(nomeUsuario);
             return rs.next();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -55,7 +55,6 @@ public class UsuarioDAO extends Usuario {
 	
 	public boolean editarUsuario(String nomeUsuario) {
 		DBQuery dbQuery = new DBQuery();
-
         try {
             String[] values = {nomeUsuario};
             ResultSet rs = dbQuery.query(OBTENHA_USUARIO_POR_NOME_USUARIO, values);

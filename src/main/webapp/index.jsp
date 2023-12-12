@@ -34,19 +34,21 @@
 							</ul>
 						</div>
 					</div>
-					<div id="pfContent" class="row portfolio-container" style="position: relative; height:100%">
-						<script>
-						    $(document).ready(function () {
-						        getRecentMovies();
-						        getHeroBanner();
+					<div id="pfContent" class="row portfolio-container" style="position: relative; min-height:4000px">
+						<script>				    
+						    $(document).ready(async function () {
+						        try {
+						            await getRecentMovies();
+						            await getHeroBanner();
+						            displayPortfolioItems(result.results);
+						        } catch (error) {
+						            console.error("Error:", error);
+						        }
 						    });
 						
 						    function getHeroBanner() {
 						        $.ajax({
-						            url: "https://api.themoviedb.org/3/movie/popular?language=pt-BR",
-						            data: {
-						                api_key: "db2e1996e8f3cccdec769dce7aa8211d"
-						            },
+						            url: "/ticket_wave/lista",					            
 						            success: function (result) {
 						                if (result.results.length > 0) {
 						                    setHeroBanner(result.results[0]);
@@ -63,21 +65,19 @@
 						        var bannerUrl = "https://image.tmdb.org/t/p/original" + movie.backdrop_path;
 						        heroSection.css("background-image", "url('" + bannerUrl + "')");
 						    }
-						
-						    function getRecentMovies() {
-						        $.ajax({
-						            url: "https://api.themoviedb.org/3/movie/now_playing?language=pt-BR",
-						            data: {
-						                api_key: "db2e1996e8f3cccdec769dce7aa8211d"
-						            },
-						            success: function (result) {
-						            	displayPortfolioItems(result.results);
-						                // Adicione a chamada para a função que exibe os itens do portfólio
-						                //displayPortfolioItems(result.results);
-						            },
-						            error: function (error) {
-						                console.log("Error fetching recently released movies: ", error);
-						            }
+						    
+						    async function getRecentMovies() {
+						        return new Promise((resolve, reject) => {
+						            $.ajax({
+						                url: "/ticket_wave/lista",
+						                success: function (result) {
+						                	displayPortfolioItems(result.results);
+						                    resolve(result);
+						                },
+						                error: function (error) {
+						                    reject(error);
+						                }
+						            });
 						        });
 						    }
 						
@@ -90,14 +90,14 @@
 						            var portfolioItem = $("<div class='col-lg-4 col-md-6 portfolio-item filter-app'>");
 						            var imgSrc = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
 						
-						            var img = $("<img class='img-fluid' alt='" + movie.title + "' src='" + imgSrc + "'>");
+						            var img = $("<img src='" + imgSrc + "' class='img-fluid'>");
 						            var portfolioInfo = $("<div class='portfolio-info'>");
 						
 						            portfolioInfo.append("<h4>" + movie.title + "</h4>");
 						            portfolioInfo.append("<p>App</p>");
 						
 						            var previewLink = $("<a href='" + imgSrc + "' data-gallery='portfolioGallery' class='portfolio-lightbox preview-link' title='" + movie.title + "'><i class='bx bx-plus'></i></a>");
-						            var detailsLink = $("<a href='portfolio-details.html' class='details-link' title='More Details'><i class='bx bx-link'></i></a>");
+						            var detailsLink = $("<a href='/ticket_wave/details.jsp?id="+movie.id+"' class='details-link' title='More Details'><i class='bx bx-link'></i></a></div></div>");
 						
 						            portfolioInfo.append(previewLink);
 						            portfolioInfo.append(detailsLink);
@@ -487,45 +487,4 @@
 
   </main><!-- End #main -->
 
-  <footer id="footer">
-
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-        &copy; Copyright <strong><span>TicketWave</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/valera-free-bootstrap-theme/ -->
-        Designed by <strong><span>vinisv | edwz</span></strong>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+  <jsp:include page="footer.jsp" />
