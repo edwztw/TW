@@ -644,7 +644,7 @@ h6 {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(246, 176, 36, 0.08);
+  box-shadow: 0px 0 30px rgb(255, 255, 255);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1332,10 +1332,10 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 15px 0;
+  padding: 20px 0;
   background: whitesmoke;
   min-height: 40px;
-  margin-top: 74px;
+  margin-top: 130px;
 }
 
 .breadcrumbs h2 {
