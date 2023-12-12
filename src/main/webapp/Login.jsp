@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <jsp:include page="head.jsp" />
@@ -11,7 +11,7 @@
 			<h2 class="form-title" id="signup"><span>ou</span>Cadastre-se</h2>
 			<div class="form-holder">
 				<input type="text" class="input" placeholder="Nome" id="nome" name="nome"/>
-				<input type="text" class="input" placeholder="Nome de usu�rio" id="nomeUsuario" name="nomeUsuario"/>
+				<input type="text" class="input" placeholder="Nome de usuário" id="nomeUsuario" name="nomeUsuario"/>
 				<input type="email" class="input" placeholder="Email" id="email" name="email"/>
 				<input type="password" class="input" placeholder="Senha" id="senha" name="senha"/>
 			</div>
@@ -21,13 +21,32 @@
 			<div class="center">
 				<h2 class="form-title" id="login"><span>ou</span>Entre</h2>
 				<div class="form-holder">
-					<input type="email" class="input" id="nomeUsuario" name="nomeUsuario" placeholder="E-mail" />
-					<input type="password" class="input" id="senha" name="senha" placeholder="Senha" />
+					<form id="loginForm">
+			                <input placeholder="Nome de usuário" type="text" class="input" id="nomeUsuario" name="nomeUsuario" required>
+			                <input placeholder="Senha" type="password" class="input" id="senha" name="senha" required>
+			        </form>
 				</div>
 				<button type="button" class="submit-btn" onclick="autenticarUsuario()">Entrar</button>
 			</div>
 		</div>
 	</div>
+	
+	
+	<!-- <div class="container mt-5">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="nomeUsuario">Nome de Usuário:</label>
+                <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="autenticarUsuario()">Login</button>
+        </form>
+    </div> -->
 
     <script>
         function autenticarUsuario() {
@@ -40,10 +59,10 @@
                 data: { nomeUsuario: nomeUsuario, senha: senha },
                 success: function(response) {
                     alert(response);
-                    // Redirecione ou atualize a p�gina conforme necess�rio
+                    // Redirecione ou atualize a página conforme necessário
                 },
                 error: function(error) {
-                    alert("Erro na requisi��o AJAX");
+                    alert("Erro na requisição AJAX");
                 }
             });
         }
@@ -63,7 +82,7 @@
                     window.location.href = "index.jsp";
                 },
                 error: function(error) {
-                    alert("Erro na requisi��o AJAX");
+                    alert("Erro na requisição AJAX");
                 }
             });
         }
