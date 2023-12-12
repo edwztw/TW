@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,12 +50,12 @@
           <li><a class="nav-link scrollto active" href="#hero">Início</a></li>
           <li><a class="nav-link scrollto" href="#about">Ingressos</a></li>
           <li><a class="nav-link scrollto" href="#services">Filmes</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Favoritos</a></li>
-          <li><a class="nav-link scrollto" href="#team">Resenhas</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Resenhas</a></li>
           <li class="dropdown"><a href="#"><span>Favoritos</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Meus Filmes</a></li>
-              <li class="dropdown"><a href="#"><span>Meus Gêneros</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a href="#">Top Filmes</a></li>
+              <li><a href="#">Top Resenhas</a></li>
+              <li class="dropdown"><a href="#"><span>Top Gêneros</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Gênero 1</a></li>
                   <li><a href="#">Gênero 2</a></li>
@@ -68,11 +66,10 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Resenhas</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
+      <a href="#"><i class="bi bi-search"></i></a>
       <a href="#about" class="get-started-btn scrollto">Entrar</a>
 
     </div>
@@ -94,7 +91,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Vilmes</h2>
+          <h2>Filmes</h2>
         </div>
 
         <div class="row">
@@ -107,6 +104,77 @@
             </ul>
           </div>
         </div>
+
+        <!-- ======= Clients Section ======= 
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+                <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>-- End Clients Section -
+        
+        --Cartão que está funcionando adequadamente--
+        <div class="row mx-auto">
+          <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="card mb-4 mx-2" style="max-width: 150px; max-height: 200px;">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+        Fim do cartão que está funcionando adequadamente-->
 
         <div class="row portfolio-container">
 
@@ -453,40 +521,40 @@
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
           <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
             <div class="content d-flex flex-column justify-content-center">
-              <h3>Voluptatem dignissimos provident quasi</h3>
+              <h3>O seu destino cinematográfico que vai além da tela.</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Bem-vindo à Ticket Wave, onde a paixão pelo cinema se encontra com a energia contagiante da comunidade. Compre seus ingressos e embarque na jornada cinematográfica definitiva.
               </p>
               <div class="row">
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+                    <span data-purecounter-start="0" data-purecounter-end="1468" data-purecounter-duration="2" class="purecounter"></span>
+                    <p><strong>Clientes e usuários satisfeitos.</strong> Nossos usuários estão encantados em "surfar" na onda do cinema e da interação social. A experiência de comprar ingressos se tornou uma jornada compartilhada, elevando a ida ao cinema a um evento único.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+                    <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="2" class="purecounter"></span>
+                    <p><strong>Parcerias</strong> com redes de cinema em todo o Brasil, garantimos acesso a emocionantes experiências cinematográficas em diversas localidades.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
+                    <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="4" class="purecounter"></span>
+                    <p><strong>Anos de experiência</strong> com uma trajetória consolidada no mercado, nos destacamos como uma referência na integração inovadora entre a venda de ingressos para cinema e a construção de uma comunidade apaixonada por filmes.</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-award"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                    <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="4" class="purecounter"></span>
+                    <p><strong>Premiações.</strong> Não vendemos apenas ingressos; oferecemos uma experiência. Junte-se a nós e descubra um mundo onde a magia do cinema se funde com a comunidade. Surfe nessa onda conosco - o futuro é cinematográfico e social na Ticket Wave.</p>
                   </div>
                 </div>
               </div>
@@ -506,12 +574,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="https://s2-oglobo.glbimg.com/-Fa_LUfhpeTxbAdUZTR_fcstzXk=/0x0:1279x717/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/x/z/MPAIuKSNmrCUfbUW2b0Q/dirty-dancing.png" class="testimonial-img" alt="">
+                <h3>Dirty Dancing</h3>
+                <h4>Johnny Castle</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Viver com medo é viver pela metade.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -519,12 +587,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="https://assets.folhavitoria.com.br/images/c03c70c0-67ff-11eb-a0e9-d762bf5849eb--minified.jpg" class="testimonial-img" alt="">
+                <h3>A Sociedade dos Poetas Mortos</h3>
+                <h4>John Keating</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Carpe diem. Aproveitem o dia. Tornem suas vidas extraordinárias.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -532,12 +600,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="https://cenasdecinema.com/wp-content/uploads/2012/10/Django-livre_destaque3.jpg" class="testimonial-img" alt="">
+                <h3>Django Livre</h3>
+                <h4>Django</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Deixe a liberdade ecoar.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -545,12 +613,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <img src="https://thumbs.jusbr.com/imgs.jusbr.com/publications/images/8dc98aa968508b53d31f0e63502a15f2" class="testimonial-img" alt="">
+                <h3>À Procura da Felicidade</h3>
+                <h4>Chris Gardner</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Nunca deixe que alguém lhe diga que não pode fazer algo. Se você tem um sonho, tem que protegê-lo. As pessoas que não podem fazer por si mesmas, dirão que você não consegue. Se quer alguma coisa, vá e lute por ela. Ponto final
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -558,12 +626,12 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="https://epipoca.com.br/wp-content/uploads/2021/05/Batman-O-Cavaleiro-das-Trevas-Ressurge-Divulgacao-1200x900.jpg" class="testimonial-img" alt="">
+                <h3>Batman - O Cavaleiro das Trevas</h3>
+                <h4>Batman</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Ou você morre herói, ou vive o suficiente para se tornar o vilão.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -577,79 +645,29 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>Gp<span>.</span></h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+    <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        &copy; Copyright <strong><span>TicketWave</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/valera-free-bootstrap-theme/ -->
+        Designed by <strong><span>vinisv | edwz</span></strong>
       </div>
     </div>
   </footer><!-- End Footer -->
+
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

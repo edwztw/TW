@@ -30,7 +30,7 @@ public class DBConnection {
 		this.setPort	("3306");
 		this.setSchema	("ticket_wave");
 		this.setUser	("root");
-		this.setPassword("");
+		this.setPassword("Jq2z921pewSD3sP");
 		this.doConnection();
 	}
 	
