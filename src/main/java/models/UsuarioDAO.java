@@ -45,7 +45,9 @@ public class UsuarioDAO extends Usuario {
         try {
             String[] values = {nomeUsuario, senha};
             ResultSet rs = dbQuery.query(AUTENTICAR_USUARIO, values);
+            //this.mapearUsuario(rs);
             System.out.println(nomeUsuario);
+            System.out.println(senha);
             return rs.next();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -53,25 +55,26 @@ public class UsuarioDAO extends Usuario {
         return false;
     }
 	
-	public boolean editarUsuario(String nomeUsuario) {
-		DBQuery dbQuery = new DBQuery();
+	public String getUsuarioPorNome(String nomeUsuario) {
+		String fieldsName = "id,nome,nome_usuario,email,senha";
+        DBQuery dbQuery = new DBQuery("usuarios", fieldsName, "id");
         try {
             String[] values = {nomeUsuario};
             ResultSet rs = dbQuery.query(OBTENHA_USUARIO_POR_NOME_USUARIO, values);
-            this.setIdUsuario(rs.getInt("id"));
-            this.setNome(rs.getString("nome"));
-            this.setNomeDeUsuario(rs.getString("nome_usuario"));
-            this.setEmail(rs.getString("email"));
-            this.setSenha(rs.getString("senha"));
-            
-            this.update();
-            return true;
-            
+            while (rs.next()) {
+            	this.setIdUsuario(rs.getInt("id"));
+				this.setNome(rs.getString("nome"));
+				this.setNomeDeUsuario(rs.getString("nome_usuario"));
+				this.setEmail(rs.getString("email"));
+				this.setSenha(rs.getString("senha"));
+				System.out.println(this.getNome());
+				return this.getNome();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-		return false;
-	}
+        return null;
+    }
 	
 	public boolean criarUsuario(String id, String nome, String nomeUsuario, String email, String senha) {
 		String fieldsName = "id,nome,nome_usuario,email,senha";
@@ -109,14 +112,18 @@ public class UsuarioDAO extends Usuario {
         return usuarios;
     }
 
-	private Usuario mapearUsuario(ResultSet rs) throws SQLException {
-		Usuario usuario = new Usuario();
-		usuario.setIdUsuario(rs.getInt("id"));
-		usuario.setNome(rs.getString("nome"));
-		usuario.setNomeDeUsuario(rs.getString("nome_usuario"));
-		usuario.setEmail(rs.getString("email"));
-		usuario.setSenha(rs.getString("senha"));
-		return usuario;
+	private void mapearUsuario(ResultSet rs) throws SQLException {
+		try {
+            while (rs.next()) {
+            	this.setIdUsuario(rs.getInt("id"));
+				this.setNome(rs.getString("nome"));
+				this.setNomeDeUsuario(rs.getString("nome_usuario"));
+				this.setEmail(rs.getString("email"));
+				this.setSenha(rs.getString("senha"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception appropriately in your code
+        }
 	}
 }
 

@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import models.UsuarioDAO;
 
@@ -18,16 +19,19 @@ public class LoginServlet extends HttpServlet {
         String senha = request.getParameter("senha");
 
         // Autenticação do usuário
-        if (autenticarUsuario(nomeUsuario, senha)) {
-            response.getWriter().write("Autenticação bem sucedida");
+        if (autenticarUsuario(nomeUsuario, senha, request)) {
+            response.setContentType("application/json");
+            response.getWriter().write("{\"success\": true}");
         } else {
-            response.getWriter().write("Falha na autenticação");
+            response.setContentType("application/json");
+            response.getWriter().write("{\"success\": false}");
         }
     }
-
-    private boolean autenticarUsuario(String nomeUsuario, String senha) {
+    private boolean autenticarUsuario(String nomeUsuario, String senha, HttpServletRequest request) {
 	    UsuarioDAO usuario = new UsuarioDAO(nomeUsuario, senha);
 	    if(usuario.autenticarUsuario(nomeUsuario, senha)) {
+	    	HttpSession session = request.getSession();
+            session.setAttribute("nomeUsuario", nomeUsuario);
 	    	return true;
 	    }
 	    else {
