@@ -645,11 +645,13 @@ h6 {
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgb(255, 255, 255);
+  color:white;
 }
 
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
+  color: white;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
@@ -673,10 +675,12 @@ h6 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color:white;
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  color:white;
 }
 
 /*--------------------------------------------------------------
@@ -925,7 +929,7 @@ section {
 .counts .content h3 {
   font-weight: 700;
   font-size: 34px;
-  color: #151515;
+  color: white;
 }
 
 .counts .content p {
@@ -949,7 +953,7 @@ section {
   line-height: 30px;
   display: block;
   font-weight: 700;
-  color: #151515;
+  color: white;
   margin-left: 50px;
 }
 
@@ -958,21 +962,21 @@ section {
   margin: 0 0 0 50px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: #3b3b3b;
+  color: #a3a3a3;
 }
 
 .counts .content .count-box a {
   font-weight: 600;
   display: block;
   margin-top: 20px;
-  color: #3b3b3b;
+  color: #a3a3a3;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
 }
 
 .counts .content .count-box a:hover {
-  color: #626262;
+  color: #a3a3a3;
 }
 
 .counts .image {
@@ -1378,6 +1382,16 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
+}
+
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+
+.profile .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 /*--------------------------------------------------------------
