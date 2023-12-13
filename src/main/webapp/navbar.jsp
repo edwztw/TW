@@ -8,9 +8,9 @@
      <nav id="navbar" class="navbar order-last order-lg-0">
        <ul>
          <li><a class="nav-link scrollto active" href="/ticket_wave/index.jsp">Início</a></li>
-         <li><a class="nav-link scrollto" href="#about">Ingressos</a></li>
-         <li><a class="nav-link scrollto" href="#services">Filmes</a></li>
-         <li><a class="nav-link scrollto " href="#portfolio">Resenhas</a></li>
+         <li><a class="nav-link scrollto" href="#about">Resenhas</a></li>
+         <li><a class="nav-link scrollto" href="/ticket_wave/filmes.jsp">Filmes</a></li>
+         <li><a class="nav-link scrollto " href="/ticket_wave/listarUsuarios.jsp">Área do admin</a></li>
          <li class="dropdown"><a href="#"><span>Favoritos</span> <i class="bi bi-chevron-down"></i></a>
            <ul>
              <li><a href="#">Top Filmes</a></li>
@@ -29,7 +29,7 @@
        </ul>
        <i class="bi bi-list mobile-nav-toggle"></i>
      </nav><!-- .navbar -->
-     <a href="#"><i class="bi bi-search"></i></a>
+     <a href="/ticket_wave/filmes.jsp"><i class="bi bi-search"></i></a>
      <a href="/ticket_wave/Login.jsp" class="get-started-btn scrollto" id="loginButton">Entrar</a>
      <div id="userNameContainer" style="color:white"></div>
      <jsp:include page="js/auth.js" />
